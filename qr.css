@@ -1,0 +1,146 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    min-height:100vh;
+    background:#eae8f1;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:20px;
+}
+
+.container{
+    width:100%;
+    max-width:800px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:30px;
+}
+
+.input{
+    width:100%;
+}
+
+h1{
+    font-family:'Oswald', sans-serif;
+    font-size:60px;
+    color:rgb(87,87,105);
+    text-align:center;
+    margin-bottom:20px;
+}
+
+.input_section{
+    width:100%;
+    display:flex;
+    align-items:center;
+    gap:15px;
+    padding:12px;
+    border:2px solid #9a9a9a;
+    border-radius:25px;
+    background:white;
+}
+
+.input_section input{
+    flex:1;
+    border:none;
+    outline:none;
+    background:transparent;
+    font-size:22px;
+    padding:10px;
+}
+
+.input_section button{
+    border:none;
+    background:#ffd414;
+    padding:15px 25px;
+    border-radius:18px;
+    font-size:22px;
+    cursor:pointer;
+    white-space:nowrap;
+}
+
+.qr-code{
+    width:100%;
+    max-width:520px;
+    min-height:350px;
+    background:#4a4a5e;
+    border-radius:20px;
+    padding:30px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:25px;
+    flex-wrap:wrap;
+}
+
+.qr-code img,
+.qr-code canvas{
+    width:250px !important;
+    height:250px !important;
+    background:white;
+    padding:10px;
+    border-radius:12px;
+}
+
+.qr-code button{
+    border:none;
+    background:#ffd414;
+    border-radius:15px;
+    padding:15px 25px;
+    cursor:pointer;
+}
+
+.qr-code button a{
+    text-decoration:none;
+    color:black;
+    font-size:18px;
+    font-weight:600;
+}
+
+@media (max-width:768px){
+
+    h1{
+        font-size:48px;
+    }
+
+    .qr-code{
+        flex-direction:column;
+    }
+}
+
+
+@media (max-width:480px){
+
+    h1{
+        font-size:36px;
+    }
+
+    .input_section{
+        flex-direction:column;
+        border-radius:20px;
+    }
+
+    .input_section button{
+        width:100%;
+    }
+
+    .qr-code{
+        width:100%;
+        padding:20px;
+    }
+
+    .qr-code img,
+    .qr-code canvas{
+        width:200px !important;
+        height:200px !important;
+    }
+
+    .qr-code button{
+        width:100%;
+    }
+}
